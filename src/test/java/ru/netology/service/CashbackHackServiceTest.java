@@ -1,9 +1,10 @@
+package ru.netology.service;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ru.netology.service.CashbackHackService;
 
 public class CashbackHackServiceTest {
+    private CashbackHackService service = new CashbackHackService();
 
     @Test
     public void shouldReturnIfTheAmountDoesNotReachTheThreshold() {
@@ -39,11 +40,12 @@ public class CashbackHackServiceTest {
     public void shouldReturnZeroWhenTheSumIsAMultipleOfTheBoundary() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
+        int expected = 0;
 
         int result = service.remain(amount);
 
-        Assert.assertEquals(result, 0);
+        Assert.assertEquals(amount, expected);
     }
 
-    
+
 }
