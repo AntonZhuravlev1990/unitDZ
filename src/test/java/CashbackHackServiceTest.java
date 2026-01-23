@@ -33,6 +33,7 @@ public class CashbackHackServiceTest {
 
         Assert.assertEquals(result, 999);
     }
+
     @Test
     public void shouldReturnZeroWhenTheSumIsAMultipleOfTheBoundary() {
         CashbackHackService service = new CashbackHackService();
@@ -41,9 +42,9 @@ public class CashbackHackServiceTest {
 
         int result = service.remain(amount);
 
-        Assert.assertEquals(amount, expected); 
-
-
+        Assert.assertEquals(result, expected);
+    }
+}
 
 
 
